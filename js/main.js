@@ -56,6 +56,12 @@ var calcTempo = function(buffer, element) {
   sound.src = URL.createObjectURL(fileInput.files[0]);
   sound.play();
   myGif.play();
+  document.getElementById('bpmslider').value = Math.round(mt.tempo);
   document.getElementById('loading').style.display = 'none';
   document.getElementById('info').innerText = `Tempo: ${Math.round(mt.tempo)} BPM`;
+}
+
+function updateSlider(slideAmount) {
+  myGif.playSpeed = Number(slideAmount) / 100
+  document.getElementById('info').innerText = `Tempo: ${Math.round(slideAmount)} BPM`;
 }

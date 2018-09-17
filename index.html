@@ -8,7 +8,7 @@
     <meta property="og:type" content="video.movie" />
     <meta property="og:description" content="Make Baldi dance to the music" />
     <meta property="og:url" content="https://110percent.xyz/default-dance" />
-    <meta property="og:image" content="https://110percent.xyz/img/favicon.png" />
+    <meta property="og:image" content="https://110percent.xyz/default-dance/img/favicon.png" />
     <meta name="keywords" content="110Percent, Baldi, Default, Dance, Fortnite, Music, Tempo">
 </head>
 
@@ -24,6 +24,10 @@
     <div id="control" style="border: 2px black solid; border-radius: 5px; padding: 2px; display: inline-block;">
         <input type="file" name="" id="fileInput">
         <audio id="sound" controls></audio>
+        <br>
+        <br>
+        <span>Manual Tempo Override </span>
+        <input type="range" id="bpmslider" name="bpmslider" min="75" max="200" onchange="updateSlider(this.value)" />
     </div>
     <br>
     <br>
